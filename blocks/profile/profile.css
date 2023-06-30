@@ -1,0 +1,59 @@
+.foto{
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+    max-width: 168px;
+    grid-area: f;
+}
+.profile__title {
+    margin: 0;
+    padding: 0;
+    max-width: 373px;
+    font-size: 42px;
+    line-height: 48px;
+    font-weight: 500;
+    grid-area: t;
+    align-self: self-end;
+}
+.editar{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 16px;
+    max-width: 7px;
+    border: 2px solid #ffffff;
+    padding: 12px;
+    grid-area: e;
+    align-self: flex-end;
+}
+.acrescentar{
+    margin: 0;
+    padding: 14px 64px;
+    border: 2px solid #ffffff;
+    max-width: 22px;
+    grid-area: a;
+    align-self: flex-end;
+    justify-self: end;
+}
+.profile__subtitle {
+    margin: 0;
+    padding: 0;
+    padding-top: 16px;
+    max-width: 415px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    grid-area: s;
+    align-self: self-start;
+}
+.profile {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 880px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-areas:
+    "f t e a"
+    "f s . .";
+    align-items: center;
+    gap: 0px;
+}

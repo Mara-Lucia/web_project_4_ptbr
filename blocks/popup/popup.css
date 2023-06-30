@@ -1,0 +1,11 @@
+.popup{
+    margin: 0 auto;
+    padding: 0;
+    color: black;
+    border: 2px solid red;
+    width: 430px;
+}
+.popup__fechar{
+    margin: 0;
+    padding: 0;
+}
