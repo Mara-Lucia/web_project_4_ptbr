@@ -16,30 +16,91 @@
         </header>
         <main>
             <div class="profile">
-                <img src="./image/image (1).jpg" alt="" class="foto">
+                <img src="./image/image (1).jpg" alt="Foto de Jacques Cousteou" class="foto">
                 <div class="profile__title">Jacques Cousteau</div>
-                <img src="./image/Vector.png" alt="" class="editar">
-                <img src="./image/Vector (1).png" alt="" class="acrescentar">
+                <button class="editar"><img src="./image/Vector.png" alt="" class="editar__img"></button>
+
+                <div class="popup__fundo">                    
+                    <div class="popup">
+                        <form id="form" class="form">
+
+                        <div class="popup__fechar"><img src="./image/Close Icon.png" alt="icone para fechar o formulário"></div>
+                        <div class="popup__content">
+                            <p class="popup__title">Editar perfil</p>    
+
+                            <input type="text" placeholder="Jacques Cousteau" class="input__text input__text_type_nome">
+                            <input type="text" placeholder="Explorador" class="input__text input__text_type_sobre-min">
+
+                            <button class="salvar">Salvar</button>                       
+                        </div>
+                        </form>
+                        <div class="form">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <button class="acrescentar"><img src="./image/Vector (1).png" alt="" class="acrescentar__img"></button>
                 <div class="profile__subtitle">Explorar</div>
             </div>
-            <ul class="elements"><li class="elements__iten"><img src="./image/vale_de_yosemite.jpg" alt="Foto do Vale de Yosemite, um rio ladeado por floresta coniferas, montanhas ao nascer do sol no fundo." class="elements__img"><p class="elements__title">Vale de Yosemite</p><img src="./image/Group.svg" alt="imagem de uma coração para dar like na foto." class="elements__like"></li>
-                <li class="elements__iten"><img src="./image/lago_louise.jpg" alt="Foto do Lago Louise, um amplo espelho de água, com mantanhas sombreando de ambos os lados, e céu azul claro." class="elements__img"><p class="elements__title">Lago Louise</p><img src="./image/Group.svg" alt="imagem de uma coração para dar like na foto." class="elements__like"></li>
-                <li class="elements__iten"><img src="./image/montanhas_carecas.jpg" alt="Foto das Montanhas Care..., o sol vermelho no horizonte ilumina sequencia de cadeias montanhosas." class="elements__img"><p class="elements__title">Montanhas Carecas</p><img src="./image/Group.svg" alt="imagem de uma coração para dar like na foto." class="elements__like"></li>
-                <li class="elements__iten"><img src="./image/latemar.jpg" alt="Foto de Latemar, foto noturna, com céu estrelado e perfil de pico e rochas de montanhas." class="elements__img"><p class="elements__title">Latemar</p><img src="./image/Group.svg" alt="imagem de uma coração para dar like na foto." class="elements__like"></li>
-                <li class="elements__iten"><img src="./image/vanoise_park.jpg" alt="Foto de Vanoise Nationa..., espelho de água, que reflete as montanhas e luz do dia, céu azul claro." class="elements__img"><p class="elements__title">Vanoise National Park</p><img src="./image/Group.svg" alt="imagem de uma coração para dar like na foto." class="elements__like"></li>
-                <li class="elements__iten"><img src="./image/lago_di_braies.jpg" alt="Foto do Lago di Braies, na baira do lago, ao lado de montanhas, um deck sobre o lago, com canoas ancooradas." class="elements__img"><p class="elements__title">Lago di Braies</p><img src="./image/Group.svg" alt="imagem de uma coração para dar like na foto." class="elements__like"></li>
+            <ul class="elements">
+                <li class="elements__iten"><img src="./image/vale_de_yosemite.jpg"
+                        alt="Foto do Vale de Yosemite, um rio ladeado por floresta coniferas, montanhas ao nascer do sol no fundo."
+                        class="elements__img">
+                    <div class="elements__text">
+                        <p class="elements__title">Vale de Yosemite</p><img src="./image/Group.svg"
+                            alt="imagem de uma coração para dar like na foto." class="elements__like">
+                    </div>
+                </li>
+                <li class="elements__iten"><img src="./image/latemar.jpg"
+                        alt="Foto de Latemar, foto noturna, com céu estrelado e perfil de pico e rochas de montanhas."
+                        class="elements__img">
+                    <div class="elements__text">
+                        <p class="elements__title">Latemar</p><img src="./image/Group.svg"
+                            alt="imagem de uma coração para dar like na foto." class="elements__like">
+                    </div>
+                </li>
+                <li class="elements__iten"><img src="./image/lago_louise.jpg"
+                        alt="Foto do Lago Louise, um amplo espelho de água, com mantanhas sombreando de ambos os lados, e céu azul claro."
+                        class="elements__img">
+                    <div class="elements__text">
+                        <p class="elements__title">Lago Louise</p><img src="./image/Group.svg"
+                            alt="imagem de uma coração para dar like na foto." class="elements__like">
+                    </div>
+                </li>
+                <li class="elements__iten"><img src="./image/vanoise_park.jpg"
+                        alt="Foto de Vanoise Nationa..., espelho de água, que reflete as montanhas e luz do dia, céu azul claro."
+                        class="elements__img">
+                    <div class="elements__text">
+                        <p class="elements__title">Vanoise National Park</p><img src="./image/Group.svg"
+                            alt="imagem de uma coração para dar like na foto." class="elements__like">
+                    </div>
+                </li>
+                <li class="elements__iten"><img src="./image/montanhas_carecas.jpg"
+                        alt="Foto das Montanhas Carecas, o sol vermelho no horizonte ilumina sequencia de cadeias montanhosas."
+                        class="elements__img">
+                    <div class="elements__text">
+                        <p class="elements__title">Montanhas Carecas</p><img src="./image/Group.svg"
+                            alt="imagem de uma coração para dar like na foto." class="elements__like">
+                    </div>
+                </li>
+                <li class="elements__iten"><img src="./image/lago_di_braies.jpg"
+                        alt="Foto do Lago di Braies, na baira do lago, ao lado de montanhas, um deck sobre o lago, com canoas ancooradas."
+                        class="elements__img">
+                    <div class="elements__text">
+                        <p class="elements__title">Lago de Braies</p><img src="./image/Group.svg"
+                            alt="imagem de uma coração para dar like na foto." class="elements__like">
+                    </div>
+                </li>
             </ul>
-            <div class="popup">
-                <a href="#" class="popup__fechar"><img src="./image/Close Icon.png"
-                        alt="icone para fechar o formulário"></a>
-                <p class="popup__title">Editar perfil</p>
-                <p class="popup button">Salvar</p>
-            </div>
+
+
         </main>
         <footer class="footer">
             <img src="./image/Footer.png" alt="" class="footer__title">
         </footer>
     </div>
+    <script src="./scripts/index.js"></script>
 </body>
 
 </html>
