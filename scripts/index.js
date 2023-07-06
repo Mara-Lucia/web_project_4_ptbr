@@ -1,36 +1,32 @@
-let editar = document.querySelector('.editar');
-console.log(editar);
+const editar = document.querySelector('.editar');
+const acrescentar = document.querySelector('.acrescentar');
+const fechar  = document.querySelector('.popup__fechar');
 
 function abrePopup () {
-    let popup__fundo = document.querySelector('.popup__fundo');
+    const popup__fundo = document.querySelector('.popup__fundo');
     popup__fundo.classList.add('popup__fundo-visivel');
 }
 
-editar.addEventListener('Click', abrePopup);
-
-    /*     popup__fundo.style.display = 'Block';
-    document.body.style.overflow = 'hidden';
-popup__fundo-visivel */
-
-/* 
-let popup__fundo = document.getElementById('.pupup__fundo');
-
-
-
 function fecharPopup () {
-    let fechar = document.getElementById('.fechar');
-
-    popup__fundo.style.display = 'none';    
-    document.body.style.overflow = 'auto';
-
+    const popup__fundo =  document.querySelector('.popup__fundo');
+    popup__fundo.classList.remove('popup__fundo-visivel');
 }
 
+editar.addEventListener('click', abrePopup);
+acrescentar.addEventListener('click', abrePopup);
+fechar.addEventListener('click', fecharPopup);
+editar.addEventListener('click', preencherFormulario);
+console.log({abrePopup, fecharPopup});
+
 // Vamos encontrar o formulário no DOM
-let formElement = document.querySelector('.form');
+const formElement = document.querySelector('.form');
 
 // Em seguida vem o handler do submit
 // ainda não vai enviar para lugar nenhum
+function preencherFormulario (){
 
+
+}
 // Observe que o nome da função começa com um verbo
 // e descreve exatamente o que a função faz
 function handleProfileFormSubmit(evt) {
@@ -42,11 +38,13 @@ function handleProfileFormSubmit(evt) {
 
     // Vamos encontrar os campos de formulário do DOM
 
-    let nameInput = form.querySelector('input__text_type_nome')// Use querySelector()
-    let jobInput = form.querySelector('input__text_type_sobre-min') // Use querySelector()
+    const nameInput = form.querySelector('input__text_type_nome');// Use querySelector()
+    const jobInput = form.querySelector('input__text_type_sobre-min'); // Use querySelector()
 
     // Pegue os valores de cada campo do valor da propriedade correspondente
-
+    const input__text_type_nome = form.querySelector('.profile__title').textContent;
+    const input__text_type_sobremin = form.querySelector('.profile__subtitle').textContent;
+    
     // Selecione os elementos aos quais os valores dos campos serão inseridos
 
     // Insira novos valores usando a
@@ -55,4 +53,4 @@ function handleProfileFormSubmit(evt) {
 
 // Conecte o handler ao formulário:
 // ele vai observar o evento de submit
-formElement.addEventListener('submit', handleProfileFormSubmit);  */
+formElement.addEventListener('submit', handleProfileFormSubmit);  

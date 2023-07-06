@@ -2,6 +2,8 @@
 
 ### Visão geral
 
+Este trabalho está apresentando exercícios de javaScript com interatividade em formulários.
+
 * Figma
 * Imagens
 

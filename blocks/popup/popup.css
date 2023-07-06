@@ -1,7 +1,8 @@
 * {
     box-sizing: border-box;
 }
-.popup__fundo{
+
+.popup__fundo {
     display: none;
     margin: 0;
     padding: 0;
@@ -13,9 +14,10 @@
     height: 100%;
 }
 
-.popup__fundo-visivel{
+.popup__fundo-visivel {
     display: block;
 }
+
 .popup {
     margin: 0 auto;
     padding: 0;
@@ -27,7 +29,8 @@
     position: relative;
     margin-top: 150px;
 }
-.popup__content{
+
+.popup__content {
     margin: 0 auto;
     padding: 0;
     background-color: #ffffff;
@@ -40,16 +43,17 @@
     margin: 10px 0;
 }
 
-.popup__fechar{
+.popup__fechar {
     margin: 0;
     padding: 0;
-/*     background-color: rgba(0, 0, 0, 0.5); */
     color: #000000;
     position: absolute;
+    z-index: 1000;
     top: -30px;
     right: -30px;
-
+    cursor: pointer;
 }
+
 .popup__title {
     margin: 0 auto;
     padding: 0;
@@ -59,7 +63,8 @@
     line-height: 29px;
     font-weight: 900;
 }
-.salvar{
+
+.salvar {
     display: block;
     margin: 20px auto;
     padding: 20px 139px;
@@ -67,8 +72,9 @@
     font-size: 18px;
     line-height: 22px;
     font-weight: 400;
-    background-color:#000000;
+    background-color: #000000;
     color: #ffffff;
+    cursor: pointer;
 }
 
 .input__text {
@@ -82,12 +88,13 @@
     line-height: 17px;
     font-weight: 400;
     width: 100%;
-    max-width: 358px;  
+    max-width: 358px;
     align-self: flex-start;
     border: none;
     border-style: none;
 }
-.popup__linha{
+
+.popup__linha {
     margin: 0 auto;
     padding: 0;
     width: 100%;
@@ -100,15 +107,15 @@
 .input {
     display: flex;
     justify-content: space-between;
-  }
-  
-  .form__submit {
+}
+
+.form__submit {
     display: flex;
     justify-content: flex-end;
     margin-top: 30px;
-  }
-  
-  .input__text {
+}
+
+.input__text {
     font-size: 0.8em;
     max-width: 358px;
     height: 50px;
@@ -116,7 +123,42 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     padding: 0 10px;
     box-sizing: border-box;
-    
-  }
-  
 
+}
+
+
+/* ----------------------------800px ---------------------------------------- */
+@media(max-width: 800px) {
+    .popup {
+        margin: 0 auto;
+        max-width: 282px;
+        margin-top: 123px;
+    }
+    
+    .input__text {
+        margin: 0 auto;
+        font-size: 14px;
+        max-width: 238px;
+        border-bottom-width: 238px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        padding: 0 10px;
+        line-height: normal;
+
+    }
+    .salvar {
+        margin: 55px auto 25px auto;
+        padding: 20px 89px;
+        border-radius: 10px;
+        font-size: 14px;
+        line-height: normal;
+    }
+    .popup__title {
+        margin-top: 20px;
+        max-width: 238px;
+        font-size: 18px;
+        line-height: normal;
+        font-weight: 900;
+        margin-bottom: 76px;
+    }
+
+}
