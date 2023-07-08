@@ -3,6 +3,7 @@
 ### Visão geral
 
 Este trabalho está apresentando exercícios de javaScript com interatividade em formulários.
+Apresenta a abertura de uma janela modal para inserção de dados.
 
 * Figma
 * Imagens
