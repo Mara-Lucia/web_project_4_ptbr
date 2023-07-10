@@ -3,7 +3,6 @@ body {
 }
 
 .page {
-  
   background-color: #000000;
   max-width: 1280px;
    /* here we've set a maximum page width */
@@ -11,4 +10,5 @@ body {
   /* this ensures that all content is centered on screens wider than 1600px */
   font-family: 'Inter', sans-serif;
   color: #FFFFFF;
+  
 }

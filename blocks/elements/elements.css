@@ -4,7 +4,6 @@
     max-width: 880px;
     column-count: 3;
     justify-content: space-around;
-
 }
 
 .elements__iten {
@@ -76,9 +75,9 @@
 
 /* ----------------------------800px ---------------------------------------- */
 @media(max-width: 800px) {
-       .elements {
+    .elements {
         max-width: 320px;
         column-count: 1;
     }
-    
+
 }
