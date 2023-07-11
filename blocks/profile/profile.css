@@ -21,7 +21,8 @@
     grid-area: t;
     align-self: self-end;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: clip ellipsis;
+    white-space: nowrap;
 }
 
 .editar {
@@ -85,7 +86,8 @@
     grid-area: s;
     align-self: self-start;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: clip ellipsis;
+    white-space: nowrap;
 }
 
 .profile {
