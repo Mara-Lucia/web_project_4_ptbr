@@ -18,6 +18,14 @@
     display: block;
 }
 
+.popup__acrescentar {
+    display: none;
+}
+
+.popup__acrescentar-visivel {
+    display: block;
+}
+
 .popup {
     margin: 0 auto;
     padding: 0;
@@ -46,12 +54,17 @@
 .popup__fechar {
     margin: 0;
     padding: 0;
+    width: 40px;
+    height: 40px;
+    background-image: url(/image/Close_Icon.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
     color: #000000;
     position: absolute;
-    z-index: 1000;
     top: -30px;
-    right: -30px;
+    right: -35px;
     cursor: pointer;
+    border: 0px;
 }
 
 .popup__title {
@@ -65,6 +78,19 @@
 }
 
 .salvar {
+    display: block;
+    margin: 20px auto;
+    padding: 20px 139px;
+    border-radius: 10px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.criar {
     display: block;
     margin: 20px auto;
     padding: 20px 139px;
@@ -134,7 +160,7 @@
         max-width: 282px;
         margin-top: 123px;
     }
-    
+
     .input__text {
         margin: 0 auto;
         font-size: 14px;
@@ -145,6 +171,7 @@
         line-height: normal;
 
     }
+
     .salvar {
         margin: 55px auto 25px auto;
         padding: 20px 89px;
@@ -152,6 +179,15 @@
         font-size: 14px;
         line-height: normal;
     }
+
+    .criar {
+        margin: 55px auto 25px auto;
+        padding: 20px 89px;
+        border-radius: 10px;
+        font-size: 14px;
+        line-height: normal;
+    }
+
     .popup__title {
         margin-top: 20px;
         max-width: 238px;

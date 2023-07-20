@@ -1,0 +1,80 @@
+.elements__popup {
+    display: none;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 880px;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    border: 2px solid blue;
+    justify-content: center;
+    align-items: center;
+}
+
+.elements__popup-visivel {
+    display: flex;
+}
+
+.elements__content {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 433px;
+    list-style: none;
+    display: grid;
+
+    grid-template-areas:
+        "fechar"
+        "foto"
+        "lugar";
+
+    grid-template-columns: 1fr;
+
+    box-sizing: border-box;
+    border: 2px solid red;
+    position: relative;
+}
+
+.elements__img_popup {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 433px;
+    width: 100%;
+    grid-area: foto;
+    justify-self: center;
+    align-self: center;
+}
+
+.elements__title_popup {
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: normal;
+    font-weight: 400;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 291px;
+    padding-top: 10px;
+    border: 2px solid red;
+    grid-area: lugar;
+}
+
+.fechar {
+    margin: 0;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    background-image: url(/image/Close_Icon.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    color: #000000;
+    position: absolute;
+    top: -30px;
+    right: -40px;
+    cursor: pointer;
+    border: 0px;
+    grid-area: fechar;
+    justify-self: right;
+
+}

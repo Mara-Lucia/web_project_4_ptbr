@@ -25,6 +25,7 @@
     box-sizing: border-box;
     justify-content: space-between;
     overflow: hidden;
+    position: relative;
 }
 
 .elements__img {
@@ -35,6 +36,7 @@
     -moz-border-radius-topleft: 10px;
     border-radius: 10px, 10px, 0px, 0px;
 }
+
 
 .elements__text {
     margin: 0 auto;
@@ -67,11 +69,43 @@
 .elements__like {
     margin: 0;
     padding: 0;
-    background-color: white;
+    width: 21px;
+    height: 19px;
+    background-image: url(/image/Group.svg);
+    background-color: transparent;
+    border: 0px;
     color: #000000;
     grid-area: l;
     align-self: center;
+    opacity: 1;
+    transition: opacity 0.5s linear;
+    cursor: pointer;
 }
+
+.elements__like:hover {
+    opacity: 0.3;
+}
+
+.curtido {
+    background-image: url(/image/Union.png);
+}
+
+.elements__descartar {
+    margin: 0;
+    padding: 0;
+    top: 18px;
+    right: 15px;
+    width: 18px;
+    height: 19px;
+    background-image: url(/image/Trash.png);
+    transition: opacity 0.5s linear;
+    cursor: pointer;
+    position: absolute;
+    border: 0px;
+    background-color: transparent;
+
+}
+
 
 /* ----------------------------800px ---------------------------------------- */
 @media(max-width: 800px) {
