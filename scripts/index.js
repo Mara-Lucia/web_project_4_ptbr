@@ -15,17 +15,47 @@ const popupAcrescentar = document.querySelector(".popup__acrescentar");
 const botoesCurtir = document.querySelectorAll(".elements__like");
 const botoesDescartar = document.querySelectorAll('.elements__descartar');
 const botoesAtivaFoto = document.querySelectorAll('.elements__img');
+const modelo = document.querySelector(".molde");
 
-function abrePopup() {
-  popupFundo.classList.add("popup__fundo-visivel");
+const initialCards = [
+  {
+    name: "Vale de Yosemite",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_yosemite.jpg"
+  },
+  {
+    name: "Lago Louise",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lake-louise.jpg"
+  },
+  {
+    name: "Montanhas Carecas",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_bald-mountains.jpg"
+  },
+  {
+    name: "Latemar",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_latemar.jpg"
+  },
+  {
+    name: "Parque Nacional da Vanoise ",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_vanoise.jpg"
+  },
+  {
+    name: "Lago di Braies",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lago.jpg"
+  }
+]; 
+
+
+
+function abrePopup () {
+  const popupFundo = document.querySelector('.popup__fundo');
+  popupFundo.classList.add('popup__fundo-visivel');
 }
-function acrescentarcard() {
-  popupAcrescentar.classList.add("popup__acrescentar-visivel");
+
+function fecharPopup () {
+  const popupFundo = document.querySelector('.popup__fundo');
+  popupFundo.classList.remove('popup__fundo-visivel');
 }
-function fecharPopup() {
-  // popupAcrescentar.classList.remove("popup__acrescentar-visivel");
-  popupFundo.classList.remove("popup__fundo-visivel");
-}
+
 function preencherFormulario() {
   const title = document.querySelector(".profile__title").textContent;
   const subtitle = document.querySelector(".profile__subtitle").textContent;
@@ -52,38 +82,62 @@ function descartarCard(event) {
   card.remove();
 }
 
-function createCard (criarCard){
-const cardTemplate = document.querySelector('#card-template');
-const cardElement = cardTemplate.content.cloneNode(true);
 
-const tituloCard = cardElement.querySelector(".elements__title_popup", "elements__title");
-const imgCard = cardElement.querySelector(".elements__img_popup","elements__img")
-
-titutoElement.textContent = criarCard.titulo;
-imgElement.src = criarCard.linkImagem;
-imgElement.alt = criarCard.titulo;
-
-
-const cardList = document.querySelector('.criarCard');
-cardList.append(cardElement);
-
-
-const criarCard = [{
-  titulo: "Lago Louise",
-  linkImagem: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lake-louise.jpg"
-}];
- 
+function createCard (Card){
+const cardTemplate = document.querySelector('#cardtemplate').content;
+const cardElement = cardTemplate.querySelector('.elements__iten').cloneNode(true);
+cardElement.querySelector('.elements__img').setAttribute('src', Card.link)
+cardElement.querySelector('.elements__img').setAttribute('alt', Card.name)
+cardElement.querySelector('.elements__title').textContent =Card.name;
+cardElement.querySelector('.elements__descartar').addEventListener('click',  (event) => {
+  event.target.parentElement.remove();
+})
+cardElement.querySelector('.elements__like').addEventListener('click',  (event) => {
+  event.target.parentElement.toggleCurtir();
+})
+return cardElement
 }
 
-criarCard.forEach(function(card){
-  createCard(card);
-});
+for (const initialCard of initialCards){
+  const Card = createCard(initialCard)
+  modelo.prepend(Card)
 
+}
+
+function checkBannerImages() {
+  if (modelo.children.length) {
+  }
+  }
+  checkBannerImages()
+
+function addNewCard() {
+  const inputTitle = document.querySelector('#titulo')
+  const inputImage = document.querySelector('#Link_imagem')  
+  if (inputTitle.value == '' || inputImage =='') {
+    alert('Por favor preencha os campos corretammente')
+  }
+  const Card = createCard({
+    name: inputTitle.value,
+    link: inputImage.value
+  })
+  modelo.append(Card)
+  inputTitle.value = ''
+  inputImage.value = ''
+}
+criar.addEventListener('click', (event) => {
+  event.preventDefault()
+  addNewCard()
+  
+}
+
+
+)
+
+
+criar.addEventListener("click", salvarDados, fecharPopup);
 editar.addEventListener("click", abrePopup);
 editar.addEventListener("click", preencherFormulario);
 acrescentar.addEventListener("click", abrePopup);
-// acrescentar.addEventListener('click', limparCampos);
-acrescentar.addEventListener("click", acrescentarcard);
 fechar.addEventListener("click", fecharPopup);
 formElement.addEventListener("submit", salvarDados);
 
@@ -97,5 +151,3 @@ botoesDescartar.forEach(function (descartar,index){
         descartarCard(event)
     });
 })
-
-
