@@ -10,6 +10,7 @@ const title = document.querySelector(".profile__title");
 const subtitle = document.querySelector(".profile__subtitle");
 const popup = document.querySelector(".popup");
 const formElement = document.querySelector("#form");
+const formCard = document.querySelector("#formCard");
 const popupFundo = document.querySelector(".popup__fundo");
 const popupAcrescentar = document.querySelector(".popup__acrescentar");
 const botoesCurtir = document.querySelectorAll(".elements__like");
@@ -81,6 +82,9 @@ function descartarCard(event) {
   const card = document.querySelector(".elements__iten");
   card.remove();
 }
+function acrescentarcard() {
+  popupAcrescentar.classList.add("popup__acrescentar-visivel");
+}
 
 
 function createCard (Card){
@@ -115,6 +119,7 @@ function addNewCard() {
   const inputImage = document.querySelector('#Link_imagem')  
   if (inputTitle.value == '' || inputImage =='') {
     alert('Por favor preencha os campos corretammente')
+    return
   }
   const Card = createCard({
     name: inputTitle.value,
@@ -124,20 +129,33 @@ function addNewCard() {
   inputTitle.value = ''
   inputImage.value = ''
 }
-criar.addEventListener('click', (event) => {
+
+formCard.addEventListener('submit', (event) => {
+  console.log(formCard)
   event.preventDefault()
+  console.log('cartao')
   addNewCard()
-  
+  document.querySelector(".popup__acrescentar-visivel").classList.remove("popup__acrescentar-visivel")
+})
+
+///////       funcionalidade Z O O M da imagem do CARD   ///////////////////
+const popupElemntos = document.querySelectorAll("elements__popup");
+function abrirZoom(event) {
+  const clicar = event.target;
+  popupElemntos.classList.add(".elements__popup-visivel");
 }
+botoesAtivaFoto.forEach(function (clicar, index) {
+  clicar.addEventListener("click", function (event) {
+    abrirZoom(event);
+  });
+});
 
 
-)
-
-
-criar.addEventListener("click", salvarDados, fecharPopup);
+//criar.addEventListener("click", salvarDados, fecharPopup);
 editar.addEventListener("click", abrePopup);
 editar.addEventListener("click", preencherFormulario);
 acrescentar.addEventListener("click", abrePopup);
+acrescentar.addEventListener("click", acrescentarcard);
 fechar.addEventListener("click", fecharPopup);
 formElement.addEventListener("submit", salvarDados);
 
